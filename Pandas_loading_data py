@@ -1,0 +1,18 @@
+import pandas as pd
+
+data = {
+    "Name": ["Amit", "Neha", "Raj", "Priya"],
+    "Marks": [85, 92, 76, 88],
+    "City": ["Surat", "Ahmedabad", "Vadodara", "Rajkot"]
+}
+
+df = pd.DataFrame(data)
+
+df.to_csv("students.csv", index=False)
+
+students = pd.read_csv("students.csv")
+
+print(students)
+
+print("\nFirst Two Rows:")
+print(students.head(2))
